@@ -11,8 +11,8 @@ import Foundation
 open class TappableDetailCell: DetailCell {
     
     // Mark: - Public Properties
-    public var firstDetailValue: String?
-    public var secondDetailValue: String?
+    open var firstDetailValue: String?
+    open var secondDetailValue: String?
     
     public var showsFirstDetailValue = true {
         didSet {
