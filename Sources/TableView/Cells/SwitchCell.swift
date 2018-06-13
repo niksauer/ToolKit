@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public final class SwitchCell: UITableViewCell {
+open class SwitchCell: UITableViewCell {
     
     // MARK: - Views
     public let label = UILabel()
@@ -30,7 +30,7 @@ public final class SwitchCell: UITableViewCell {
     }
     
     // MARK: - Customization
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         label.translatesAutoresizingMaskIntoConstraints = false
