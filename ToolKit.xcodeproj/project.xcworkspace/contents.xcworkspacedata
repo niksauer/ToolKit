@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ToolKit_iOS.xcodeproj">
+      location = "self:/Users/nik/Documents/Developer/Swift/ToolKit_iOS/ToolKit.xcodeproj">
    </FileRef>
 </Workspace>
