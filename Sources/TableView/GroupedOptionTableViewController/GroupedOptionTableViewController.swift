@@ -14,6 +14,11 @@ open class GroupedOptionTableViewController: UITableViewController, GroupedOptio
     public struct Option: Equatable {
         public let name: String
         public var isEnabled: Bool
+        
+        public init(name: String, isEnabled: Bool) {
+            self.name = name
+            self.isEnabled = isEnabled
+        }
     }
     
     public class GroupedOption: Equatable {
@@ -35,20 +40,12 @@ open class GroupedOptionTableViewController: UITableViewController, GroupedOptio
         }
     }
     
-    // MARK: - Private Properties
-    private let oldOptions: [GroupedOption]
-    
     // MARK: - Public Properties
     public var options: [GroupedOption]
     
-    public var hasChangedOption: Bool {
-        return oldOptions == options
-    }
-    
     // MARK: - Initialization
-    init(options: [GroupedOption]) {
+    public init(options: [GroupedOption]) {
         self.options = options
-        self.oldOptions = options
         
         super.init(style: .grouped)
         
@@ -67,7 +64,7 @@ open class GroupedOptionTableViewController: UITableViewController, GroupedOptio
     }
     
     // MARK: - Public Methods
-    private func groupedOption(for cell: GroupedOptionCell) -> GroupedOption? {
+    public func groupedOption(for cell: GroupedOptionCell) -> GroupedOption? {
         guard let indexPath = tableView.indexPath(for: cell), let groupedOption = options.first(where: { $0.section == indexPath.section && $0.row == indexPath.row }) else {
             return nil
         }
