@@ -44,9 +44,17 @@ open class DetailCell: UITableViewCell {
             label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
         
+        let detailLabelTrailingConstraint: NSLayoutConstraint
+        
+        if accessoryType != .none {
+            detailLabelTrailingConstraint = detailLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        } else {
+            detailLabelTrailingConstraint = detailLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor)
+        }
+        
         NSLayoutConstraint.activate([
             detailLabel.centerYAnchor.constraint(equalTo: label.centerYAnchor),
-            detailLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor)
+            detailLabelTrailingConstraint
         ])
     }
     
