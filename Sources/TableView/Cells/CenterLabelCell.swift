@@ -8,13 +8,13 @@
 
 import Foundation
 
-class CenterLabelCell: UITableViewCell {
+public class CenterLabelCell: UITableViewCell {
     
     // MARK: - Views
-    let label = UILabel()
+    public let label = UILabel()
     
     // MARK: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         label.numberOfLines = 0
@@ -23,12 +23,12 @@ class CenterLabelCell: UITableViewCell {
         contentView.addSubview(label)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Customization
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         label.translatesAutoresizingMaskIntoConstraints = false

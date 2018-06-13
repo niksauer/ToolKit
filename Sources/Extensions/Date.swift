@@ -8,11 +8,11 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     
     // MARK: - Public Properties
     /// returns specified date in specified timezone but with set time of 0AM
-    var UTCStart: Date {
+    public var UTCStart: Date {
         var calendar = Calendar(identifier: .gregorian)
         let timezone = TimeZone(abbreviation: "UTC")!
         calendar.timeZone = timezone
@@ -21,21 +21,21 @@ extension Date {
     }
     
     /// returns successor of specified date in specified timezone but with set time of 0AM
-    var UTCEnd: Date {
+    public var UTCEnd: Date {
         var calendar = Calendar(identifier: .gregorian)
         let timezone = TimeZone(abbreviation: "UTC")!
         calendar.timeZone = timezone
         return calendar.date(byAdding: .day, value: +1, to: self.UTCStart)!
     }
     
-    var isUTCToday: Bool {
+    public var isUTCToday: Bool {
         var calendar = Calendar(identifier: .gregorian)
         let timezone = TimeZone(abbreviation: "UTC")!
         calendar.timeZone = timezone
         return calendar.compare(self, to: Date(), toGranularity: .day) == .orderedSame
     }
     
-    var isUTCFuture: Bool {
+    public var isUTCFuture: Bool {
         var calendar = Calendar(identifier: .gregorian)
         let timezone = TimeZone(abbreviation: "UTC")!
         calendar.timeZone = timezone
@@ -43,12 +43,12 @@ extension Date {
     }
     
     /// checks whether date is today according to current (system) calendar
-    var isToday: Bool {
+    public var isToday: Bool {
         return Calendar.current.compare(self, to: Date(), toGranularity: .day) == .orderedSame
     }
     
     /// checks whether date lays in future according to current (system) calendar
-    var isFuture: Bool {
+    public var isFuture: Bool {
         return Calendar.current.compare(self, to: Date(), toGranularity: .day) == .orderedDescending
     }
     

@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class SwitchCell: UITableViewCell {
+public class SwitchCell: UITableViewCell {
     
     // MARK: - Views
-    let label = UILabel()
-    let switchControl = UISwitch()
+    public let label = UILabel()
+    public let switchControl = UISwitch()
     
     // MARK: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
@@ -25,12 +25,12 @@ class SwitchCell: UITableViewCell {
         contentView.addSubview(switchControl)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Customization
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         label.translatesAutoresizingMaskIntoConstraints = false

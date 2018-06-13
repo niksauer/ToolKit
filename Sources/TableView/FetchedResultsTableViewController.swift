@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 import CoreData
 
-class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewController, NSFetchedResultsControllerDelegate {
+public class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewController, NSFetchedResultsControllerDelegate {
     
     // MARK: - Public Properties
-    var fetchedResultsController: NSFetchedResultsController<T>!
+    public var fetchedResultsController: NSFetchedResultsController<T>!
     
     // MARK: - TableView DataSource
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override public func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let sections = fetchedResultsController.sections, sections.count > 0 {
             return sections[section].name
         } else {
@@ -32,20 +32,20 @@ class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewControll
         }
     }
     
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    override public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return fetchedResultsController.sectionIndexTitles
     }
     
-    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return fetchedResultsController.section(forSectionIndexTitle: title, at: index)
     }
     
     // MARK: - FetchedResultsController Delegate
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
     
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+    public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
         case .insert:
             tableView.insertSections([sectionIndex], with: .fade)
@@ -56,7 +56,7 @@ class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewControll
         }
     }
     
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+    public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
             tableView.insertRows(at: [newIndexPath!], with: .fade)
@@ -69,7 +69,7 @@ class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewControll
         }
     }
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
     

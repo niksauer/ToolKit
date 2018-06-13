@@ -8,13 +8,13 @@
 
 import Foundation
 
-class TappableDetailCell: DetailCell {
+public class TappableDetailCell: DetailCell {
     
     // Mark: - Public Properties
-    var firstDetailValue: String?
-    var secondDetailValue: String?
+    public var firstDetailValue: String?
+    public var secondDetailValue: String?
     
-    var showsFirstDetailValue = true {
+    public var showsFirstDetailValue = true {
         didSet {
             if showsFirstDetailValue {
                 detailLabel.text = firstDetailValue
@@ -25,12 +25,12 @@ class TappableDetailCell: DetailCell {
     }
     
     // Mark: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

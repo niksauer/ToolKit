@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class TextFieldCell: UITableViewCell {
+public class TextFieldCell: UITableViewCell {
     
     // MARK: - Views
-    let textField = UITextField()
+    public let textField = UITextField()
     
     // MARK: - Public Properties
-    var isEnabled: Bool = true {
+    public var isEnabled: Bool = true {
         didSet {
             if isEnabled {
                 textField.isUserInteractionEnabled = true
@@ -27,14 +27,14 @@ class TextFieldCell: UITableViewCell {
         }
     }
     
-    var isEnabledClearButtonMode: UITextFieldViewMode = .whileEditing {
+    public var isEnabledClearButtonMode: UITextFieldViewMode = .whileEditing {
         didSet {
             isEnabled = { isEnabled }()
         }
     }
     
     // MARK: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
@@ -42,12 +42,12 @@ class TextFieldCell: UITableViewCell {
         contentView.addSubview(textField)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Customization
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         textField.translatesAutoresizingMaskIntoConstraints = false

@@ -8,24 +8,24 @@
 
 import Foundation
 
-class PickerViewCell: UITableViewCell {
+public class PickerViewCell: UITableViewCell {
     
     // MARK: - Views
-    let pickerView = UIPickerView()
+    public let pickerView = UIPickerView()
     
     // MARK: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(pickerView)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Customization
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         pickerView.translatesAutoresizingMaskIntoConstraints = false

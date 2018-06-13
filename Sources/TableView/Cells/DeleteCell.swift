@@ -8,16 +8,16 @@
 
 import Foundation
 
-class DeleteCell: CenterLabelCell {
+public class DeleteCell: CenterLabelCell {
     
     // MARK: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         label.textColor = UIColor.red
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

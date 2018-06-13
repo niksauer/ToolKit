@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class DetailCell: UITableViewCell {
+public class DetailCell: UITableViewCell {
     
     // Mark: - Views
-    let label = UILabel()
-    let detailLabel = UILabel()
+    public let label = UILabel()
+    public let detailLabel = UILabel()
     
     // Mark: - Initialization
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         detailLabel.textColor = UIColor.lightGray
@@ -25,12 +25,12 @@ class DetailCell: UITableViewCell {
         contentView.addSubview(detailLabel)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // Mark: - Customization
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         label.translatesAutoresizingMaskIntoConstraints = false

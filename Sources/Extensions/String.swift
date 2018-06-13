@@ -8,18 +8,18 @@
 
 import Foundation
 
-extension String {
-    subscript (i: Int) -> Character {
+public extension String {
+    public subscript (i: Int) -> Character {
         return self[index(startIndex, offsetBy: i)]
     }
     
-    subscript (i: Int) -> String {
+    public subscript (i: Int) -> String {
         return String(self[i] as Character)
     }
 }
 
-extension Optional where Wrapped == String {
-    var nilIfEmpty: String? {
+public extension Optional where Wrapped == String {
+    public var nilIfEmpty: String? {
         guard let strongSelf = self else {
             return nil
         }
