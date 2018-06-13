@@ -19,7 +19,7 @@ open class DetailCell: UITableViewCell {
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        detailLabel.textColor = UIColor(red: 142, green: 142, blue: 147, alpha: 1)
+        detailLabel.textColor = UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1)
         
         contentView.addSubview(label)
         contentView.addSubview(detailLabel)
