@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class DeleteCell: CenterLabelCell {
+public final class DeleteCell: CenterLabelCell {
     
     // MARK: - Initialization
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {

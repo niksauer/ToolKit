@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class TappableDetailCell: DetailCell {
+open class TappableDetailCell: DetailCell {
     
     // Mark: - Public Properties
     public var firstDetailValue: String?

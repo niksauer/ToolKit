@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-public class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewController, NSFetchedResultsControllerDelegate {
+public final class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewController, NSFetchedResultsControllerDelegate {
     
     // MARK: - Public Properties
     public var fetchedResultsController: NSFetchedResultsController<T>!

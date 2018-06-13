@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class TextFieldCell: UITableViewCell {
+public final class TextFieldCell: UITableViewCell {
     
     // MARK: - Views
     public let textField = UITextField()

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class SwitchCell: UITableViewCell {
+public final class SwitchCell: UITableViewCell {
     
     // MARK: - Views
     public let label = UILabel()

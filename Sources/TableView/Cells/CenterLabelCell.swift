@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CenterLabelCell: UITableViewCell {
+open class CenterLabelCell: UITableViewCell {
     
     // MARK: - Views
     public let label = UILabel()
@@ -28,7 +28,7 @@ public class CenterLabelCell: UITableViewCell {
     }
     
     // MARK: - Customization
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         label.translatesAutoresizingMaskIntoConstraints = false

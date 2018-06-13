@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PickerViewCell: UITableViewCell {
+public final class PickerViewCell: UITableViewCell {
     
     // MARK: - Views
     public let pickerView = UIPickerView()
