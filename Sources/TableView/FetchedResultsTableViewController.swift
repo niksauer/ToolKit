@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 import CoreData
 
-public final class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewController, NSFetchedResultsControllerDelegate {
+open class FetchedResultsTableViewController<T: NSManagedObject>: UITableViewController, NSFetchedResultsControllerDelegate {
     
     // MARK: - Public Properties
     public var fetchedResultsController: NSFetchedResultsController<T>!
     
     // MARK: - TableView DataSource
-    override public func numberOfSections(in tableView: UITableView) -> Int {
+    override open func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
     
-    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
-    override public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let sections = fetchedResultsController.sections, sections.count > 0 {
             return sections[section].name
         } else {
@@ -32,11 +32,11 @@ public final class FetchedResultsTableViewController<T: NSManagedObject>: UITabl
         }
     }
     
-    override public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    override open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return fetchedResultsController.sectionIndexTitles
     }
     
-    override public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+    override open func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return fetchedResultsController.section(forSectionIndexTitle: title, at: index)
     }
     
