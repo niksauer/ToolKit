@@ -76,7 +76,7 @@ open class GroupedOptionTableViewController: UITableViewController, GroupedOptio
     }
     
     // MARK: - GroupedOptionCell Delegate
-    func groupedOptionCellDidChangeIsOn(_ groupedOptionCell: GroupedOptionCell) {
+    open func groupedOptionCellDidChangeIsOn(_ groupedOptionCell: GroupedOptionCell) {
         guard let indexPath = tableView.indexPath(for: groupedOptionCell), let groupedOption = options.first(where: { $0.section == indexPath.section && $0.row == indexPath.row }) else {
             return
         }

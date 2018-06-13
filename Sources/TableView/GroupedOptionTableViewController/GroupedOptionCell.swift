@@ -12,7 +12,7 @@ protocol GroupedOptionCellDelegate: class {
     func groupedOptionCellDidChangeIsOn(_ groupedOptionCell: GroupedOptionCell)
 }
 
-class GroupedOptionCell: SwitchCell {
+open class GroupedOptionCell: SwitchCell {
     
     // MARK: - Public Properties
     var delegate: GroupedOptionCellDelegate?
