@@ -50,6 +50,7 @@
 		247033CD20D18740002B5F5D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247033CB20D18740002B5F5D /* Collection.swift */; };
 		247033CE20D18740002B5F5D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247033CB20D18740002B5F5D /* Collection.swift */; };
 		247033CF20D18740002B5F5D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247033CB20D18740002B5F5D /* Collection.swift */; };
+		2493FCBB20D26EE700F33996 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493FCBA20D26EE700F33996 /* TextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		247033C120D1872B002B5F5D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		247033C620D18736002B5F5D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		247033CB20D18740002B5F5D /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		2493FCBA20D26EE700F33996 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		2470337C20D15BB0002B5F5D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2493FCBC20D26EF000F33996 /* ViewController */,
 				247033B520D183B7002B5F5D /* Extensions */,
 				2470338720D15CFA002B5F5D /* TableView */,
 				245F8E5620D1A48C00B2BC74 /* CollectionView */,
@@ -197,6 +200,14 @@
 				247033AD20D1833F002B5F5D /* DeleteCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2493FCBC20D26EF000F33996 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2493FCBA20D26EE700F33996 /* TextViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +420,7 @@
 				247033BE20D186AA002B5F5D /* Date.swift in Sources */,
 				247033B120D18396002B5F5D /* UIView.swift in Sources */,
 				247033A220D182DA002B5F5D /* TappableDetailCell.swift in Sources */,
+				2493FCBB20D26EE700F33996 /* TextViewController.swift in Sources */,
 				245F8E5B20D1A84E00B2BC74 /* GroupedOptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
